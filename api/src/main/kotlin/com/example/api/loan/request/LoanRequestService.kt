@@ -8,8 +8,7 @@ interface LoanRequestService {
     ): LoanRequestDto.LoanRequestResponseDto // main
 
     fun saveUserInfo(
-            userKey: String,
-            loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
+            userInfoDto: UserInfoDto
     ) // 유저 정보 저장
 
     fun loanRequestReview(userKey: String) // 대출 심사 요청
