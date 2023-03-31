@@ -7,13 +7,13 @@ import javax.persistence.*
 class LoanReview (
 
         @Column(name = "USR_KEY")
-        val userKey: String,
+        val userKey: String, // 유저 키
 
         @Column(name = "LOAN_LMT_AMT")
-        val loanLimitedAmount: Long,
+        val loanLimitedAmount: Long, // 대출 한도
 
         @Column(name = "LOAN_INTRT")
-        val loanInterest: Double
+        val loanInterest: Double // 이자율
 ) {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)

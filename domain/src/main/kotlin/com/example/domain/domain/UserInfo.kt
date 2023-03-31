@@ -8,16 +8,16 @@ import javax.persistence.*
 class UserInfo(
 
     @Column(name = "USR_KEY")
-    val userKey: String,
+    val userKey: String, // 유저 키
 
     @Column(name = "USR_REG_NUM")
-    val userRegistrationNumber: String,
+    val userRegistrationNumber: String, // 유저 주민번호
 
     @Column(name = "USR_NM")
-    val userName : String,
+    val userName : String, // 유저 이름
 
     @Column(name = "USR_ICM_AMT")
-    val userIncomeAmount: Long,
+    val userIncomeAmount: Long, // 유저 소득
 
 
 ) {
