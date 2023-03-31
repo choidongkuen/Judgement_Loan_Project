@@ -12,4 +12,10 @@ class LoanReviewDto {
             val userLimitAmount: Long,
             val userLoanInterest: Double
     )
+
+    data class LoanReview(
+            val userKey: String,
+            val userLimitAmount: Long,
+            val userLoanInterest: Double
+    )
 }
