@@ -2,8 +2,8 @@ package com.example.domain.domain
 
 import javax.persistence.*
 
-@Table
 @Entity
+@Table(name = "LOAN_REVIEW")
 class LoanReview (
 
         @Column(name = "USR_KEY")
