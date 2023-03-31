@@ -14,7 +14,15 @@ class LoanRequestDto {
             val userName: String,
             val userIncomeAmount: Long,
             val userRegistrationNumber: String
-    )
+    ) {
+        fun toUserInfoDto(userKey: String) =
+                UserInfoDto(
+                        this.userRegistrationNumber,
+                        this.userName,
+                        userKey,
+                        this.userIncomeAmount
+                )
+    }
 
 
     data class LoanRequestResponseDto( // 응답
