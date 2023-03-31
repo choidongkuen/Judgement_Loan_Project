@@ -1,5 +1,7 @@
 package com.example.api.loan.request
 
+import com.example.domain.domain.UserInfo
+
 
 interface LoanRequestService {
 
@@ -9,7 +11,7 @@ interface LoanRequestService {
 
     fun saveUserInfo(
             userInfoDto: UserInfoDto
-    ) // 유저 정보 저장
+    ): UserInfo // 유저 정보 저장
 
     fun loanRequestReview(userKey: String) // 대출 심사 요청
 }
