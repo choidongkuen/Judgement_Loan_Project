@@ -12,7 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket
 @Configuration
 class SwaggerConfig {
 
-    // http://localhost:8080/swappger-ui/index-html
+    // url : http://localhost:8080/swagger-ui/index.html
 
     @Bean
     fun api(): Docket {
