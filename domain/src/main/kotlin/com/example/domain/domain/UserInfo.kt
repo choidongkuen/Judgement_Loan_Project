@@ -13,6 +13,8 @@ class UserInfo(
     @Column(name = "USR_REG_NUM")
     val userRegistrationNumber: String,
 
+    @Column(name = "USR_NM")
+    val userName : String,
 
     @Column(name = "USR_ICM_AMT")
     val userIncomeAmount: Long,
