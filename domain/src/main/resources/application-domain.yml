@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # 데이터 대소문자 구분
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/loan?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: loan
+    password: ehdrms6390
