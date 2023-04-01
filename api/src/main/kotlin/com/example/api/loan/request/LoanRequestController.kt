@@ -15,7 +15,7 @@ class LoanRequestController(
         private val loanRequestServiceImpl: LoanRequestServiceImpl
 ) {
 
-    @PostMapping("request")
+    @PostMapping("/request")
     fun loanRequest(
             @RequestBody loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
     ): ResponseEntity<LoanRequestDto.LoanRequestResponseDto> {
