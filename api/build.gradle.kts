@@ -7,4 +7,7 @@ dependencies {
     implementation("io.springfox:springfox-boot-starter:3.0.0")
 
     implementation(project(":domain")) // domain gradle.kts 전부 받아서 사용
+
+    testImplementation("io.mockk:mockk:1.12.0")
+    runtimeOnly("com.h2database:h2") // test 사용할 데이터베이스
 }
