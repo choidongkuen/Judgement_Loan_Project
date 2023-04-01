@@ -10,7 +10,7 @@ import javax.crypto.spec.SecretKeySpec
 class Encryptor {
 
     companion object {
-        private const val secretKey = "123213123123123123123123123123"
+        private const val secretKey = "oingisprettyintheworld1234567890"
     } // secret key
 
 
