@@ -7,29 +7,31 @@ import org.springframework.stereotype.Service
 
 @Service
 class LoanRequestServiceImpl(
-        private val generateUserKey: GenerateUserKey,
-        private val userInfoRepository: UserInfoRepository,
-        private val encryptComponent: Encryptor
+    private val generateUserKey: GenerateUserKey,
+    private val userInfoRepository: UserInfoRepository,
+    private val encryptComponent: Encryptor
 ) : LoanRequestService {
     override fun loanRequestMain(
-            loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
+        loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
     ): LoanRequestDto.LoanRequestResponseDto {
 
         val userKey = generateUserKey.generateUserKey()
 
-        loanRequestInputDto.userRegistrationNumber = encryptComponent.encryptString(loanRequestInputDto.userRegistrationNumber)
+        loanRequestInputDto.userRegistrationNumber =
+            encryptComponent.encryptString(loanRequestInputDto.userRegistrationNumber) // 주민 번호 암호화
 
         saveUserInfo(
-                loanRequestInputDto.toUserInfoDto(userKey)
-        )
+            loanRequestInputDto.toUserInfoDto(userKey)
+        ) // 회원정보 저장
 
         loanRequestReview("")
 
         return LoanRequestDto.LoanRequestResponseDto(userKey)
     }
 
+
     override fun saveUserInfo(userInfoDto: UserInfoDto) =
-            userInfoRepository.save(userInfoDto.toEntity())
+        userInfoRepository.save(userInfoDto.toEntity())
 
 
     override fun loanRequestReview(userKey: String) {

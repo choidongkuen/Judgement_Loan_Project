@@ -1,6 +1,6 @@
 spring:
   jpa:
-    generate-ddl: false
+    generate-ddl: true
     show-sql: true
 
     hibernate:

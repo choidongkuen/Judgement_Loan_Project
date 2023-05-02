@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController
 
 
 // 대출 심사 결과 요청하는 컨트롤러
-
 @RestController
 @RequestMapping("/loan/api/v1")
 class LoanReviewController(

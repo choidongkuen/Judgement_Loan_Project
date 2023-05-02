@@ -23,7 +23,7 @@ class CustomResponse(
         val errorMessage: String,
 
         ) {
-        val timeStamp = LocalDateTime.now()
+        val timeStamp: LocalDateTime = LocalDateTime.now()
     }
 
 }

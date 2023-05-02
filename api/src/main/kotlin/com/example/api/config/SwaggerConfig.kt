@@ -13,23 +13,22 @@ import springfox.documentation.spring.web.plugins.Docket
 class SwaggerConfig {
 
     // url : http://localhost:8080/swagger-ui/index.html
-
     @Bean
     fun api(): Docket {
         return Docket(DocumentationType.OAS_30)
-                .useDefaultResponseMessages(false)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.api")) // base package
-                .paths(PathSelectors.any())
-                .build()
-                .apiInfo(apiInfo())
+            .useDefaultResponseMessages(false)
+            .select()
+            .apis(RequestHandlerSelectors.basePackage("com.example.api")) // base package
+            .paths(PathSelectors.any())
+            .build()
+            .apiInfo(apiInfo())
     }
 
     private fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
-                .title("Swagger")
-                .description("loan")
-                .version("1.0")
-                .build()
+            .title("Swagger")
+            .description("loan")
+            .version("1.0")
+            .build()
     }
 }

@@ -49,7 +49,7 @@ internal class LoanRequestControllerTest {
         encryptComponent = Encryptor()
 
         loanRequestServiceImpl = LoanRequestServiceImpl(
-                generateKey, userInfoRepository, encryptComponent
+            generateKey, userInfoRepository, encryptComponent
         )
 
         loanRequestController = LoanRequestController(loanRequestServiceImpl)
@@ -65,25 +65,25 @@ internal class LoanRequestControllerTest {
     fun successLoanRequestTest() {
         // given
         val loanRequestInputDto: LoanRequestDto.LoanRequestInputDto =
-                LoanRequestDto.LoanRequestInputDto(
-                        userName = "TEST",
-                        userIncomeAmount = 10000,
-                        userRegistrationNumber = "971201-1216826"
-                )
+            LoanRequestDto.LoanRequestInputDto(
+                userName = "TEST",
+                userIncomeAmount = 10000,
+                userRegistrationNumber = "971201-1216826"
+            )
 
-        every {userInfoRepository.save(any())} returns UserInfo(
-                "","","",1
+        every { userInfoRepository.save(any()) } returns UserInfo(
+            "", "", "", 1
         )
 
         // when
         mockMvc.post(
-                "$baseUrl/request"
+            "$baseUrl/request"
         ) {
             contentType = MediaType.APPLICATION_JSON
             accept = MediaType.APPLICATION_JSON
             content = objectMapper.writeValueAsString(loanRequestInputDto)
         }.andExpect {
-            status{ isOk() }
+            status { isOk() }
         }
         // then
     }

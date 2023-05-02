@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 // 대출 심사 요청하는 클래스
-
-
 @RestController
 @RequestMapping("/loan/api/v1")
 class LoanRequestController(

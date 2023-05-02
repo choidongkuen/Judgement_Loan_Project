@@ -15,6 +15,8 @@ class LoanRequestDto {
             val userIncomeAmount: Long,
             var userRegistrationNumber: String
     ) {
+
+        // LoanRequestDto -> UserInfoDto
         fun toUserInfoDto(userKey: String) =
                 UserInfoDto(
                         this.userRegistrationNumber,
