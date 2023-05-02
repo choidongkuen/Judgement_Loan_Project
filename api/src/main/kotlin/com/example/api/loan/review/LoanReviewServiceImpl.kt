@@ -8,21 +8,23 @@ import org.springframework.stereotype.Service
 
 @Service
 class LoanReviewServiceImpl(
-        private val userReviewRepository: UserReviewRepository
-): LoanReviewService {
+    private val userReviewRepository: UserReviewRepository
+) : LoanReviewService {
     override fun loanReviewMain(userKey: String): LoanReviewDto.LoanReviewResponseDto {
 
         return LoanReviewDto.LoanReviewResponseDto(
             userKey = userKey,
             loanResult = getLoanReviewResult(userKey)?.toResponseDto()
                 ?: throw CustomException(CustomErrorCode.RESULT_NOT_FOUND)
+            // userKey 해당하는 loanResult 존재하지 않는 경우
         )
 
     }
+
     override fun getLoanReviewResult(userKey: String) =
         userReviewRepository.findByUserKey(userKey)
 
-    private fun LoanReview.toResponseDto() =
+    private fun LoanReview.toResponseDto() = // LoanReview 확장 함수
         LoanReviewDto.LoanResult(
             userLimitAmount = this.loanLimitedAmount,
             userLoanInterest = this.loanInterest

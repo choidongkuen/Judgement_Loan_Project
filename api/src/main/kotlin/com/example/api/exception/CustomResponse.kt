@@ -6,7 +6,6 @@ import java.time.LocalDateTime
 class CustomResponse(
     private val customException: CustomException
 ) {
-
     fun toResponseEntity(): ResponseEntity<ErrorResponseDto> {
         return ResponseEntity
             .status(customException.customErrorCode.statusCode)
@@ -20,9 +19,8 @@ class CustomResponse(
 
     data class ErrorResponseDto(
         val errorCode: String,
-        val errorMessage: String,
-
-        ) {
+        val errorMessage: String
+    ) {
         val timeStamp: LocalDateTime = LocalDateTime.now()
     }
 
