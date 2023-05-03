@@ -6,12 +6,13 @@ import com.example.domain.domain.UserInfo
 interface LoanRequestService {
 
     fun loanRequestMain(
-            loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
+        loanRequestInputDto: LoanRequestDto.LoanRequestInputDto
     ): LoanRequestDto.LoanRequestResponseDto // main
 
     fun saveUserInfo(
-            userInfoDto: UserInfoDto
+        userInfoDto: UserInfoDto
     ): UserInfo // 유저 정보 저장
 
-    fun loanRequestReview(userKey: String) // 대출 심사 요청
+
+    fun loanRequestReview(userInfoDto: UserInfoDto)
 }
