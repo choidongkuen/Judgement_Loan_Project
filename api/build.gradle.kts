@@ -11,6 +11,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.+")
 
     implementation(project(":domain")) // domain gradle.kts 전부 받아서 사용
+    implementation(project(":kafka"))
 
     // test
     testImplementation("io.mockk:mockk:1.12.0")
