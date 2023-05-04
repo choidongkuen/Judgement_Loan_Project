@@ -4,7 +4,7 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "LOAN_REVIEW")
-class LoanReview (
+class LoanReview(
 
         @Column(name = "USR_KEY")
         val userKey: String, // 유저 키
@@ -18,4 +18,5 @@ class LoanReview (
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long? = null
+
 }

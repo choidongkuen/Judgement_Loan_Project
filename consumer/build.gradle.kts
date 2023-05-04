@@ -10,7 +10,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.+")
 
 
-    // Domain
+    // Domain -> class 가져옴
     implementation(project(":domain"))
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.7.6")
     implementation("org.springframework.boot:spring-boot-starter-web")
