@@ -7,7 +7,6 @@ plugins {
 
     id("org.springframework.boot") version "2.6.3" apply false
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
-
 }
 
 allprojects {
@@ -23,9 +22,11 @@ subprojects {
     apply {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jetbrains.kotlin.plugin.spring")
+        
 
         plugin("org.springframework.boot")
         plugin("io.spring.dependency-management")
+
     }
 
     tasks.withType<KotlinCompile> {
