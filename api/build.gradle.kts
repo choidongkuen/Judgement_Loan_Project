@@ -23,4 +23,7 @@ dependencies {
     // Kotlin Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
 
+    // redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
 }
