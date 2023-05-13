@@ -4,6 +4,7 @@ import com.example.api.exception.CustomErrorCode
 import com.example.api.exception.CustomException
 import com.example.domain.domain.LoanReview
 import com.example.domain.repository.UserReviewRepository
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.stereotype.Service
 
 @Service
@@ -21,6 +22,7 @@ class LoanReviewServiceImpl(
 
     }
 
+    @Cacheable(value = ["REVIEW"], key = "#userKey", cacheManager = "redisCacheManager")
     override fun getLoanReviewResult(userKey: String) =
         userReviewRepository.findByUserKey(userKey)
 
