@@ -1,7 +1,20 @@
 ## Kafka 를 이용한 대출 심사 프로젝트  🏦
 
-### ⚒️ 프로젝트 기술 : Kotlin,Spring boot(2.6.3), Kafka, H2, JPA, Redis, MariaDB, Docker, AWS, Nginx(Proxy Server)
+### ⚒️ 프로젝트 기술 :
+- Kotlin
+- Spring boot(2.6.3)
+- Kafka
+- H2
+- JPA
+- Redis
+- MariaDB
+- Docker
+- AWS
+- Nginx(Proxy Server)
 ### ⏰ 프로젝트 기간 : 2023.04.10 ~ 2023.05.17
+
+### 🔥 주요 어플리케이션 API
+
 ### 🦾 프로젝트 어플리케이션 정보 : 
 
 | 이름 | 호스트 : 포트 | 설명 |
