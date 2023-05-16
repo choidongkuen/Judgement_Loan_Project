@@ -1,2 +1,1 @@
-docker container run --name mariadbtest
--e MYSQL_ROOT_PASSWORD=1234 -p 3306:3306 -d docker.io/library/mariadb:10.5
+docker run -d --name loan-mariadb -p 3305:3305 --restart=always -e MYSQL_ROOT_PASSWORD=root mariadb

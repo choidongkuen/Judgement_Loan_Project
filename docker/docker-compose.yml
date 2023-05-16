@@ -1,10 +1,12 @@
-version: '3'
+version: '2'
 services:
   zoopkeeper:
     image: wurstmeister/zookeeper
     container_name: zookeeper
     ports:
       - "2191:2181"
+    networks:
+      - loan
   kafka:
     image: wurstmeister/kafka
     container_name: kafka
@@ -15,3 +17,42 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - loan
+
+  api:
+    image: api:1.0.1
+    container_name: api
+    ports:
+      - "8080:8080"
+    networks:
+      - loan
+
+  consumer:
+    image: consumer:1.0.1
+    container_name: consumer
+    ports:
+      - "8081:8081"
+    networks:
+      - loan
+  css:
+    image: css:1.0.1
+    container_name: css
+    ports:
+      - "8082:8082"
+    networks:
+      - loan
+
+  nginx:
+    image: nginx:1.0.1
+    container_name: nginx
+    ports:
+      - "8083:8083"
+    networks:
+      - loan
+
+networks:
+  loan:
+    driver: bridge
+
+# api,consumer,css,nginx,kafka,zookeeper 같은 network 사용

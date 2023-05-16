@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # setting version
-VERSION='1.0.0'
+VERSION='1.0.1'
 
 cd ..
 ./gradlew clean build -x test
