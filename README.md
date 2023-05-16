@@ -27,7 +27,7 @@
   | 이름 | 포트 |
   | -- | -- |
   | redis | 6379 |
-  | mariadb | 3306 |
+  | mariadb | 3305 |
   | kafka | 9092 |
   | zoopkeeper | 2181 |
   | nginx | 8083 |
