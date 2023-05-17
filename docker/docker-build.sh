@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# 각 어플리케이션에 존재하는 Dockerfile 을 기준으로 이미지를 빌드
 # setting version
 VERSION='1.0.1'
 
