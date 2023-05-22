@@ -20,7 +20,9 @@
 
 ### ⏰ 프로젝트 기간 : 2023.04.10 ~ 2023.05.17
 
-### 🔥 주요 어플리케이션 API
+### 🔥 프로젝트 개요
+  <img width="713" alt="스크린샷 2023-05-22 오후 9 59 24" src="https://github.com/choidongkuen/Loan_Judgement_Project/assets/96874318/dec0532c-dbcf-4a14-86c8-19e11d2424a7">
+
 
 ### 🦾 프로젝트 어플리케이션 정보 : 
 
