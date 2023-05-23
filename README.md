@@ -8,7 +8,7 @@
 - **Library/Framework**
   - Spring Boot(2.6.3) - multi module
   - JPA(Spring Data JPA)
-  - Kakfa
+  - Kafka
   - Spring Cloud Gateway(Nginx)
   - Junit 5
   - Swagger
