@@ -1,4 +1,4 @@
-## Kafka 를 이용한 Mutli-Module 대출 심사 프로젝트  🏦
+## Kafka 를 이용한 Multi-Module 대출 심사 프로젝트  🏦
 
 ### ⚒️ 프로젝트 기술 :
 
