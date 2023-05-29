@@ -4,7 +4,7 @@ import javax.persistence.*
 
 
 @Entity
-@Table(name = "USER_INFO")
+@Table(name = "USR_INFO")
 class UserInfo(
 
     @Column(name = "USR_KEY")
@@ -14,7 +14,7 @@ class UserInfo(
     val userRegistrationNumber: String, // 유저 주민번호
 
     @Column(name = "USR_NM")
-    val userName : String, // 유저 이름
+    val userName: String, // 유저 이름
 
     @Column(name = "USR_ICM_AMT")
     val userIncomeAmount: Long, // 유저 소득

@@ -10,9 +10,9 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://loan-mariadb:3305/loan?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
-    username: loan
-    password: ehdrms6390
+    url: jdbc:mariadb://localhost:3305/loan
+    username: root
+    password: root
 
   redis:
     host: loan-redis
