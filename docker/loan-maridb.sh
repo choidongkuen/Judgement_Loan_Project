@@ -1,1 +1,1 @@
-docker run -d --name loan-mariadb -p 3306:3306 --restart=always -e MYSQL_ROOT_PASSWORD=root mariadb
+docker run -d --name loan-mariadb -p 3305:3306 --restart=always -e MYSQL_ROOT_PASSWORD=root mariadb

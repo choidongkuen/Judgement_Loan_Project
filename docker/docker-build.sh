@@ -11,20 +11,20 @@ echo $ROOT_PATH # 위치 잘 찍히는지 test
 
 # api application
 echo 'api docker image build...'
-cd $ROOT_PATH/api && docker build -t api:$VERSION -f ./DockerFile .
+cd $ROOT_PATH/api && docker build -t api:$VERSION -f .
 #echo $ROOT_PATH/api
 echo 'api docker image build... Done'
 
 
 echo 'consumer docker image build...'
-cd $ROOT_PATH/consumer && docker build -t consumer:$VERSION -f ./DockerFile .
+cd $ROOT_PATH/consumer && docker build -t consumer:$VERSION -f .
 
 
 echo 'css docker image build...'
-cd $ROOT_PATH/css && docker build -t css:$VERSION -f ./DockerFile .
+cd $ROOT_PATH/css && docker build -t css:$VERSION -f .
 echo 'css docker image build... Done'
 
 
 echo 'nginx docker image build...'
-cd $ROOT_PATH/nginx && docker build -t nginx:$VERSION -f ./DockerFile .
+cd $ROOT_PATH/nginx && docker build -t nginx:$VERSION -f .
 echo 'nginx docker image build... Done'
